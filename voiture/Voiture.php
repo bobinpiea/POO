@@ -4,13 +4,17 @@
 class Voiture {
 
     // 2. Ajout des attributs en Private
-    private $_marque;   // marque de la voiture
+    protected $_marque;   // marque de la voiture
     private $_model;    // modèle de la marque (sa série ?)
     private $_couleur;  // couleur de la voiture
     private $_moteur;   // type de moteur
     private $_statut; // moteur éteint de bas
     private $_vitesseActuelle;
-    private $_freiner; 
+
+    // Passer tout en protected des que j'ai un enfant 
+
+
+   
 
     // 5. Ajout du constructeur
 
@@ -25,11 +29,7 @@ class Voiture {
         $this->_vitesseActuelle = $vitesseActuelle;
     }
 
-    // 3. Ajout des constantes
 
-    const MOTEUR_ESSENCE = "Essence";
-    const MOTEUR_DIESEL = "Diesel";
-    const MOTEUR_ELECTRIQUE = "Électrique";  
 
     /* 4. Ajout des méthodes publiques
     Les méthodes sont des fonctions dédiées chacune
