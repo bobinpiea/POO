@@ -72,17 +72,14 @@ class Voiture {
         }
     }
     public function freiner($freinage) {
-        if ($this->_statut == 0) {
-            // Si moteur éteint
+        if ($this->_statut == 0) { // moteur éteint
             return "le moteur est éteint.";
-        } else if ($this->_vitesseActuelle >= 20) {
-            // Si moteur allumé ET vitesse >= 20
+        } else if ($this->_vitesseActuelle >= 20) { // moteur allumé ET vitesse >= 20
             $this->_vitesseActuelle = $this->_vitesseActuelle - 20;
-            return "La voiture freine. Vitesse actuelle : " . $this->_vitesseActuelle . " km/h.";
+            return "La voiture freine";
         } else {
-            // Sinon (moteur allumé ET vitesse < 20)
             $this->_vitesseActuelle = 0;
-            return "La voiture s'arrête. Vitesse actuelle : 0 km/h.";
+            return "La voiture est arrêté";
         }
     }
 

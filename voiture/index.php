@@ -22,9 +22,9 @@ echo $voiture1->demarrer();
 
 echo $voiture1->getStatut();
 
-echo $voiture1->accelerer(20);
+echo $voiture1->accelerer(50);
 var_dump($voiture1);
 
 
-echo $voiture1->freiner();
-var_dump($freiner);
+echo $voiture1->freiner(20);
+var_dump($voiture1);
